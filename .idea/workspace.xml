@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fac008a9-050c-49ab-a657-9087b2e41421" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../robodog_perception/robodog-perception/corners_tagger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../robodog_perception/robodog-perception/dataloader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../robodog_perception/robodog-perception/fluid_sim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tracker_poc/efficient_tracker/datasets/convert_classes_to_0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tracker_poc/efficient_tracker/yoloV5/yolov5_attention_grad/infer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/xtend-atlas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/detect_people.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/trackAnything_gui/app_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/trackAnything_gui/app_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/track_anything.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/track_anything.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ros2_video_streamer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ros2_video_streamer/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ros2_video_streamer/camera_simulator/camera_simulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ros2_video_streamer/camera_simulator/camera_simulator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vod_nav/vod_nav/infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../vod_nav/vod_nav/infer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vod_nav/vod_nav/trainer_position.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../vod_nav/vod_nav/trainer_position.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2dm9UL3tNrQGqwkMVKXrjN4oyeN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.detect_people.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="detect_people" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="xtend-atlas" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_people.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fac008a9-050c-49ab-a657-9087b2e41421" name="Changes" comment="" />
+      <created>1710602400993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710602400993</updated>
+    </task>
+    <servers />
+  </component>
+</project>
