@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac008a9-050c-49ab-a657-9087b2e41421" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../robodog_perception/robodog-perception/corners_tagger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../robodog_perception/robodog-perception/dataloader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../robodog_perception/robodog-perception/fluid_sim.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../tracker_poc/efficient_tracker/datasets/convert_classes_to_0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../tracker_poc/efficient_tracker/yoloV5/yolov5_attention_grad/infer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/xtend-atlas.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detect_people.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/trackAnything_gui/app_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/trackAnything_gui/app_gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/track_anything.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../inspection_perception/Track-Anything/track_anything.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ros2_video_streamer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ros2_video_streamer/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ros2_video_streamer/camera_simulator/camera_simulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ros2_video_streamer/camera_simulator/camera_simulator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vod_nav/vod_nav/infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../vod_nav/vod_nav/infer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vod_nav/vod_nav/trainer_position.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../vod_nav/vod_nav/trainer_position.py" afterDir="false" />
-    </list>
+    <list default="true" id="fac008a9-050c-49ab-a657-9087b2e41421" name="Changes" comment="v1.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +72,19 @@
       <option name="presentableId" value="Default" />
       <updated>1710602400993</updated>
     </task>
+    <task id="LOCAL-00001" summary="v1.0">
+      <option name="closed" value="true" />
+      <created>1710607175864</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710607175864</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.0" />
   </component>
 </project>
