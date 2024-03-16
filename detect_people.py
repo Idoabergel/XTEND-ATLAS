@@ -7,6 +7,20 @@ import numpy as np
 from torchvision.ops import nms
 
 # =========================================
+# =============== MISSION =================
+# =========================================
+
+"""
+# Implement collision detection logic
+# Your task is to write code that analyzes the detected people's positions
+# and determines if the robot is on a collision path with any of them.
+# You can find the detected people's bounding box coordinates in the 'people_boxes' list.
+# Use this information to calculate the distance between the robot and each person,
+# and trigger an alert (e.g., play a sound, display a message) if a collision is imminent.
+# Happy coding!
+"""
+
+# =========================================
 # =========== GLOBAL PARAMS ===============
 # =========================================
 # Check if CUDA is available
@@ -16,12 +30,8 @@ print(f'Using device: {device}')
 # Full path for video to process.
 video_path = '/home/ido/Work/code-repos/cvsandbox_mark3/peopleTracker/people_yoloV8/videos/lab01.mp4'
 
-# =========================================
-# =============== OPTIONS =================
-# =========================================
 
-PREVIEW_RESULTS = True
-
+# TODO: change folder to sub-dir videos
 
 # =========================================
 # ========== HELPER FUNCTION ==============
@@ -185,8 +195,9 @@ def process_video(video_path, model):
 # =========================================
 # ========= COMPUTE COLLISION =============
 # =========================================
+# TODO: Implement collision detection logic
 def is_collision():
-    # Insert here your solution
+    # Code your solution here
     pass
 
 
