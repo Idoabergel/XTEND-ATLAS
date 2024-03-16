@@ -9,7 +9,7 @@ This project utilizes a pre-trained YOLOv5 model for person detection.
 ## The Mission
 - Keep people safe from robots on busy streets.
 - Analyze robot videos to detect potential collisions.
-- Get inventive with alerts; sounds, flashing messages, anything goes!
+- Get creative with alerts; sounds, flashing messages, anything goes!
 
 
 ## Prerequisites
@@ -35,6 +35,7 @@ pip install -r requirements.txt
 
 ## Download Pre-trained Model
 The Python script will automatically download the pre-trained YOLOv5 model the first time you run it.
+You can also manually download the model in this git folder. 
 
 ## Running the Code
 To start the person detection and collision prediction, navigate to the project directory in your terminal and run:
