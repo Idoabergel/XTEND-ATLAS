@@ -28,10 +28,14 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f'Using device: {device}')
 
 # Full path for video to process.
-video_path = '/home/ido/Work/code-repos/cvsandbox_mark3/peopleTracker/people_yoloV8/videos/lab01.mp4'
+video_path = 'videos/CLIP_10.mp4'
 
+# Inference size - the resolution fed into YOLO network
+inference_size = (640, 480)
 
-# TODO: change folder to sub-dir videos
+# Target display size - the resolution used to visualization.
+display_size = (1280, 960)
+
 
 # =========================================
 # ========== HELPER FUNCTION ==============
@@ -45,6 +49,39 @@ def download_model():
 # =========================================
 # ========= MODEL PREDICTIONS =============
 # =========================================
+
+def resize_and_pad_frame(frame, target_size):
+    """
+    Resize the frame to fit within the target size while maintaining aspect ratio,
+    and then pad it to match the exact target size.
+    """
+    # Determine the scale for resizing
+    scale_height = target_size[1] / frame.shape[0]
+    scale_width = target_size[0] / frame.shape[1]
+    scale = min(scale_height, scale_width)
+
+    # Calculate the new dimensions
+    new_width = int(frame.shape[1] * scale)
+    new_height = int(frame.shape[0] * scale)
+
+    # Resize the frame
+    frame_resized = cv2.resize(frame, (new_width, new_height))
+
+    # Calculate padding
+    pad_vertical = (target_size[1] - new_height) / 2  # Division by 2 to distribute padding
+    pad_horizontal = (target_size[0] - new_width) / 2
+
+    # Convert to int and make sure padding is non-negative
+    pad_top = int(np.floor(pad_vertical))
+    pad_bottom = int(np.ceil(pad_vertical))
+    pad_left = int(np.floor(pad_horizontal))
+    pad_right = int(np.ceil(pad_horizontal))
+
+    # Apply padding
+    frame_padded = cv2.copyMakeBorder(frame_resized, pad_top, pad_bottom,
+                                      pad_left, pad_right, cv2.BORDER_CONSTANT, value=[0, 0, 0])
+
+    return frame_padded
 
 
 def process_detections(detections, conf_threshold=0.25, nms_threshold=0.45):
@@ -141,13 +178,9 @@ def process_video(video_path, model):
     # Load video
     cap = cv2.VideoCapture(video_path)
 
-    # Extract original frame size
+    # Extract original frame size - optional
     original_frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     original_frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    original_size = (original_frame_width, original_frame_height)
-
-    # Size of the frame that is fed into the YOLO
-    inference_size = (640, 480)
 
     # Inference loop
     while cap.isOpened():
@@ -155,8 +188,8 @@ def process_video(video_path, model):
         if not ret:
             break
 
-        # Resize frame to model's expected size
-        frame_resized = cv2.resize(frame, inference_size)
+        # Resize and pad the frame for the model's input
+        frame_resized = resize_and_pad_frame(frame, inference_size)
 
         # Convert frame to format expected by the model
         img = cv2.cvtColor(frame_resized, cv2.COLOR_BGR2RGB)
@@ -171,19 +204,23 @@ def process_video(video_path, model):
         # Convert detections to numpy array
         # Each detection has the format: x1, y1, x2, y2, confidence, class
         processed_detections = process_detections(results, conf_threshold=0.5)
-        resized_detections = resize_detections_to_original(processed_detections, original_size, inference_size)
+        resized_detections = resize_detections_to_original(processed_detections, display_size, inference_size)
+
+        # Resize frame for display
+        frame_display = resize_and_pad_frame(frame, display_size)
 
         # Iterate through detections
         for det in resized_detections:
             x1, y1, x2, y2 = map(int, det[:4])
             conf, cls = map(float, det[4:])
             if cls == 0:  # Assuming '0' is the class for person
-                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.rectangle(frame_display, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 label = f"Person: {conf:.2f}"
-                cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+                cv2.putText(frame_display, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX,
+                            0.5, (255, 255, 255), 2)
 
         # Visualization
-        cv2.imshow('frame', frame)
+        cv2.imshow('Preview', frame_display)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
