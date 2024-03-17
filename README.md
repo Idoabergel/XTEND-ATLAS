@@ -37,6 +37,12 @@ pip install -r requirements.txt
 The Python script will automatically download the pre-trained YOLOv5 model the first time you run it.
 You can also manually download the model in this git folder. 
 
+## Download The videos
+Download the test videos using this link and copy them into 
+```bash
+https://xtend-content.wetransfer.com/downloads/5899119aa082924ca6558dd11d567dae20240314165344/85075a193eb4b519535c9b2b61dc8c3020240314165344/77a906
+```
+
 ## Running the Code
 To start the person detection and collision prediction, navigate to the project directory in your terminal and run:
 
