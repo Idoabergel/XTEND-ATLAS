@@ -5,7 +5,7 @@ import torch
 import cv2
 import numpy as np
 from torchvision.ops import nms
-
+import os
 # =========================================
 # =============== MISSION =================
 # =========================================
@@ -175,6 +175,9 @@ def resize_detections_to_original(detections, original_size, inference_size=(640
 
 
 def process_video(video_path, model):
+    # Assert that the video path exists
+    assert os.path.exists(video_path), f"Video path does not exist: {video_path}"
+
     # Load video
     cap = cv2.VideoCapture(video_path)
 
