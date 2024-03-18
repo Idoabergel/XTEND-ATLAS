@@ -7,9 +7,9 @@ The main objective is to analyze footage to detect people and determine if the r
 This project utilizes a pre-trained YOLOv5 model for person detection.
 
 ## The Mission
-- Keep people safe from robots on busy streets.
-- Analyze robot videos to detect potential collisions.
+- Analyze robot path to detect potential collisions.
 - Get creative with alerts; sounds, flashing messages, anything goes!
+- The goal is to implement the logic for determining if the robot is about to collide with any of the detected people.
 
 
 ## Prerequisites
@@ -53,8 +53,7 @@ python detect_people.py
 Before running the script, ensure you modify the video_path variable in detect_people.py to point to the path of your robot footage video file.
 
 ## How It Works
-The script uses the YOLOv5 model to detect people in each frame of the provided video. It draws green bounding boxes around detected people. The logic for determining if the robot is about to collide with any of the detected people needs to be implemented as part of the assignment.
-
+The script uses the YOLOv5 model to detect people in each frame of the provided video. It draws green bounding boxes around detected people. 
 
 ## Contributing
 
