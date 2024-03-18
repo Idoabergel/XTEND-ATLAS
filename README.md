@@ -38,10 +38,7 @@ The Python script will automatically download the pre-trained YOLOv5 model the f
 You can also manually download the model in this git folder. 
 
 ## Download The videos
-Download the test videos using this link and copy them into the 'videos' folder.
-```bash
-https://xtend-content.wetransfer.com/downloads/5899119aa082924ca6558dd11d567dae20240314165344/85075a193eb4b519535c9b2b61dc8c3020240314165344/77a906
-```
+Download the test videos using this [link](https://xtend-content.wetransfer.com/downloads/5899119aa082924ca6558dd11d567dae20240314165344/85075a193eb4b519535c9b2b61dc8c3020240314165344/77a906) and copy them into the 'videos' folder.
 
 ## Running the Code
 To start the person detection and collision prediction, navigate to the project directory in your terminal and run:
