@@ -28,7 +28,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f'Using device: {device}')
 
 # Full path for video to process.
-video_path = 'videos/CLIP_10.mp4'
+video_path = 'videos/CLIP_09.mp4'
 
 # Inference size - the resolution fed into YOLO network
 inference_size = (640, 480)
@@ -42,9 +42,16 @@ display_size = (1280, 960)
 # =========================================
 def download_model():
     # This function is a placeholder. YOLOv5 models can be loaded using PyTorch Hub
-    model = torch.hub.load('ultralytics/yolov5', 'yolov5n', pretrained=True).to(device)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True).to(device)
     return model
 
+
+def get_color_by_id(cls_id):
+    # Define a simple set of base colors
+    base_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (0, 255, 255), (255, 0, 255)]
+    # Generate a color from the base_colors list using class ID
+    color = base_colors[cls_id % len(base_colors)]
+    return color
 
 # =========================================
 # ========= MODEL PREDICTIONS =============
@@ -212,16 +219,29 @@ def process_video(video_path, model):
         # Resize frame for display
         frame_display = resize_and_pad_frame(frame, display_size)
 
-        # Iterate through detections
+        # Iterate through detections for visualization
         for det in resized_detections:
             x1, y1, x2, y2 = map(int, det[:4])
-            conf, cls = map(float, det[4:])
-            if cls == 0:  # Assuming '0' is the class for person
-                cv2.rectangle(frame_display, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                label = f"Person: {conf:.2f}"
-                cv2.putText(frame_display, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5, (255, 255, 255), 2)
+            conf = det[4]
+            cls = int(det[5])
 
+            # Get a color based on the class ID
+            color = get_color_by_id(cls)
+
+            label = f"{model.names[cls]}({conf:.2f})"
+            # Draw bounding box
+            cv2.rectangle(frame_display, (x1, y1), (x2, y2), color, 2)
+
+            # Calculate text width & height to background rectangle
+            text_size = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)
+            text_width = text_size[0][0]
+            text_height = text_size[0][1]
+
+            # Draw a filled rectangle for text background
+            cv2.rectangle(frame_display, (x1, y1 - text_height - 10), (x1 + text_width, y1), (0, 0, 0), -1)
+
+            # Put text on top of the rectangle
+            cv2.putText(frame_display, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
         # Visualization
         cv2.imshow('Preview', frame_display)
         if cv2.waitKey(1) & 0xFF == ord('q'):
