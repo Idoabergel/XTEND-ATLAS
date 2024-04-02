@@ -12,10 +12,10 @@ import os
 
 """
 # Implement collision detection logic
-# Your task is to write code that analyzes the detected people's positions
+# Your task is to write code that analyzes the detected objects positions
 # and determines if the robot is on a collision path with any of them.
-# You can find the detected people's bounding box coordinates in the 'people_boxes' list.
-# Use this information to calculate the distance between the robot and each person,
+# You can find the detected object's bounding box coordinates in the 'resized_detections' list.
+# Use this information to calculate the distance between the robot and each object,
 # and trigger an alert (e.g., play a sound, display a message) if a collision is imminent.
 # Happy coding!
 """

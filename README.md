@@ -3,13 +3,13 @@
 
 ## Overview
 This project is designed as an educational assignment, introduce you to the basics of Artificial Intelligence (AI) and Computer Vision (CV) using Python.
-The main objective is to analyze footage to detect people and determine if the robot is on a collision path with them.
-This project utilizes a pre-trained YOLOv5 model for person detection.
+The main objective is to analyze footage to detect objects and determine if the robot is on a collision path with them.
+This project utilizes a pre-trained YOLOv5 model for object detection.
 
 ## The Mission
-- Analyze robot path to detect potential collisions.
+- Analyze the robot's path to detect potential collisions with objects.
 - Get creative with alerts; sounds, flashing messages, anything goes!
-- The goal is to implement the logic for determining if the robot is about to collide with any of the detected people.
+- The goal is to implement the logic for determining if the robot is about to collide with any detected objects.
 
 
 ## Prerequisites
@@ -41,16 +41,16 @@ You can also manually download the model in this git folder.
 Download the test videos using this [link](https://xtend-content.wetransfer.com/downloads/5899119aa082924ca6558dd11d567dae20240314165344/85075a193eb4b519535c9b2b61dc8c3020240314165344/77a906) and copy them into the 'videos' folder.
 
 ## Running the Code
-To start the person detection and collision prediction, navigate to the project directory in your terminal and run:
+To start the object detection and collision prediction, navigate to the project directory in your terminal and run:
 
 ```bash
-python detect_people.py
+python detect.py
 ```
 
-Before running the script, ensure you modify the video_path variable in detect_people.py to point to the path of your robot footage video file.
+Before running the script, ensure you modify the video_path variable in detect.py to point to the path of your robot footage video file.
 
 ## How It Works
-The script uses the YOLOv5 model to detect people in each frame of the provided video. It draws green bounding boxes around detected people. 
+The script uses the YOLOv5 model to detect objects in each frame of the provided video. It draws green bounding boxes around detected objects. 
 
 ## Contributing
 
@@ -59,5 +59,3 @@ Got an idea? Share it! We're all ears for your genius. Just hit us up with your 
 
 ## Additional Notes
 
-- XTEND and ATLAS Collaboration: Where high schoolers become the last line of defense against the robot apocalypse.
-- Project Insight: Proof that the journey to save the world begins with the most heroic task of all: homework.
