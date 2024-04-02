@@ -28,7 +28,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f'Using device: {device}')
 
 # Full path for video to process.
-video_path = 'videos/CLIP_09.mp4'
+video_path = 'videos/CLIP_06.mp4'
 
 # Inference size - the resolution fed into YOLO network
 inference_size = (640, 480)
@@ -42,7 +42,7 @@ display_size = (1280, 960)
 # =========================================
 def download_model():
     # This function is a placeholder. YOLOv5 models can be loaded using PyTorch Hub
-    model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True).to(device)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5n', pretrained=True).to(device)
     return model
 
 
